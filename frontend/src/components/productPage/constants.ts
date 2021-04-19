@@ -1,0 +1,1 @@
+export type MATCH_PRARMS_ID = { id: string }
