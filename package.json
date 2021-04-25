@@ -32,6 +32,10 @@
     "mongoose": "^5.12.4"
   },
   "devDependencies": {
+    "@types/react-redux": "^7.1.16",
+    "@types/redux": "^3.6.0",
+    "@types/redux-devtools-extension": "^2.13.2",
+    "@types/redux-thunk": "^2.1.0",
     "concurrently": "^6.0.2",
     "nodemon": "^2.0.7"
   }

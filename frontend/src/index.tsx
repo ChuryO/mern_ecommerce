@@ -1,13 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import store from '~/state/store'
+import App from './App'
 
 import './vendor/bootstrap.min.css'
-import './index.css';
+import './index.css'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+	<Provider store={ store }>
+		<App />
+	</Provider>,
+	document.getElementById('root')
+)
