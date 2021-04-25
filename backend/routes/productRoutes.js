@@ -20,12 +20,13 @@ router.get('/', asyncHandler(async ( req, res ) => {
  * @access 	Public
  */
 router.get('/:id', asyncHandler(async ( req, res ) => {
-	const id = req.params.id;
-	try {
-		const product = await Product.findById(id);
+	const product = await Product.findById(req.params.id);
+
+	if (product) {
 		res.json(product);
-	} catch (e) {
-		res.status(404).json({ message: `Product ${ id }: not found` });
+	} else {
+		res.status(404);
+		throw new Error('Product not found');
 	}
 }));
 
